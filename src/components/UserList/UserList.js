@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react'
+import { getUsers }  from '../../features/users/userSlice'
+import ChatList from './ChatList'
+import { Link } from 'react-router-dom'
 import Switch from 'react-switch'
 import { IoSettingsOutline } from 'react-icons/io5'
 import { useSelector, useDispatch } from 'react-redux'
-import { getUsers, selectUsers }  from '../../features/users/userSlice'
-import ChatList from './ChatList'
-import { Link } from 'react-router-dom'
+
 const UserList = () => {
-  const [active, setactive] = useState(true)
+
+  const [active, setactive] = useState(true);
+
   const handleChange = (checked) => {
     setactive(checked)
   }
-  const users = useSelector(selectUsers)
+
+  const users = useSelector((state) => state.userdata);
+
   const dispatch = useDispatch()
 
    useEffect(() => {

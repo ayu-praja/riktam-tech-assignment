@@ -7,6 +7,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />} />
       <Route path='/:username' element={<Layout />} />
+      <Route path='/detail/:user' element={<Layout />} />
     </Routes>
   )
 }

@@ -4,7 +4,6 @@ import MobileView from './MobileView'
 
 const Layout = () => {
  
-    console.log("hello")
   return (
     <div>
       <div className='lg:block hidden '>
